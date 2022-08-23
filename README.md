@@ -1,4 +1,4 @@
-# TesteTabela
+# Tabela de filtro usando PrimeNG
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.4.
 
