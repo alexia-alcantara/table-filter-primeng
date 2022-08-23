@@ -1,0 +1,25 @@
+{
+    "data": [
+        {
+            "fornecedor": "Fornecedor 1",
+            "status": "unqualified",
+            "representative": {
+                "name": "Item 1"
+            }
+        },
+        {
+            "fornecedor": "Fornecedor 1",
+            "status": "unqualified",
+            "representative": {
+                "name": "Item 2"
+            }
+        },
+        {
+            "fornecedor": "Fornecedor 1",
+            "status": "unqualified",
+            "representative": {
+                "name": "Item 3"
+            }
+        }
+    ]
+}
