@@ -1,10 +1,13 @@
 export interface Representative {
     name?: string;
-    image?: string;
 }
 
 export interface Fornecedor {
     name?: string;
+}
+
+export interface Valor {
+    item?: string;
 }
 
 export interface EnvioDate {
@@ -20,7 +23,7 @@ export interface cCusto {
 }
 
 export interface ordemCompra {
-    compra?: number;
+    compra?: string;
 }
 
 export interface informacoesAdicionais {

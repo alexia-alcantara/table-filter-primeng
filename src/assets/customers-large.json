@@ -1,24 +1,84 @@
 {
     "data": [
         {
-            "fornecedor": "Fornecedor 1",
-            "status": "unqualified",
             "representative": {
                 "name": "Item 1"
+            },
+            "fornecedor": {
+                "name": "Fornecedor 1"
+            },
+            "valor": {
+                "item": "Item 1"
+            },
+            "envio": {
+                "data": "18/08/2022"
+            },
+            "status": "unqualified",
+            "aprovacao": {
+                "data": "22/08/2022"
+            },
+            "cCusto": {
+                "custo": "C.Custo 1"
+            },
+            "ordemCompra": {
+                "compra": "000000"
+            },
+            "informacoesAdicionais": {
+                "informacoes": "teste1"
             }
         },
         {
-            "fornecedor": "Fornecedor 1",
-            "status": "unqualified",
             "representative": {
                 "name": "Item 2"
+            },
+            "fornecedor": {
+                "name": "Fornecedor 2"
+            },
+            "valor": {
+                "item": "Item 2"
+            },
+            "envio": {
+                "data": "19/08/2022"
+            },
+            "status": "qualified",
+            "aprovacao": {
+                "data": "23/08/2022"
+            },
+            "cCusto": {
+                "custo": "C.Custo 2"
+            },
+            "ordemCompra": {
+                "compra": "000001"
+            },
+            "informacoesAdicionais": {
+                "informacoes": "teste2"
             }
         },
         {
-            "fornecedor": "Fornecedor 1",
-            "status": "unqualified",
             "representative": {
                 "name": "Item 3"
+            },
+            "fornecedor": {
+                "name": "Fornecedor 3"
+            },
+            "valor": {
+                "item": "Item 3"
+            },
+            "envio": {
+                "data": "20/08/2022"
+            },
+            "status": "unqualified",
+            "aprovacao": {
+                "data": "23/08/2022"
+            },
+            "cCusto": {
+                "custo": "C.Custo 3"
+            },
+            "ordemCompra": {
+                "compra": "000003"
+            },
+            "informacoesAdicionais": {
+                "informacoes": "teste3"
             }
         }
     ]

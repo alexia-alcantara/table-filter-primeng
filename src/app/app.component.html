@@ -39,11 +39,11 @@
             [showOperator]="false" [showAddButton]="false">
 
             <ng-template pTemplate="filter" let-value let-filter="filterCallback">
-              <p-multiSelect [ngModel]="value" [options]="fornecedor" placeholder="Any"
-                (onChange)="filter($event.value)">
+              <p-multiSelect [ngModel]="value" [options]="fornecedores" placeholder="Any"
+                (onChange)="filter($event.value)" optionLabel="name">
 
                 <ng-template let-option pTemplate="item">
-                  <div class="p-multiselect-statuses-option">
+                  <div class="p-multiselect-fornecedor-option">
                     <span class="p-ml-1">{{option.name}}</span>
                   </div>
                 </ng-template>
@@ -51,6 +51,51 @@
               </p-multiSelect>
             </ng-template>
 
+          </p-columnFilter>
+        </div>
+      </th>
+
+      <th>
+        <div class="p-d-flex p-jc-between p-ai-center">
+          Valor
+
+          <p-columnFilter field="valor" matchMode="in" display="menu" [showMatchModes]="false" [showOperator]="false"
+            [showAddButton]="false">
+
+            <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+              <p-multiSelect [ngModel]="value" [options]="valores" placeholder="Any" (onChange)="filter($event.value)"
+                optionLabel="item">
+
+                <ng-template let-option pTemplate="item">
+                  <div class="p-multiselect-valor-option">
+                    <span class="p-ml-1">{{option.item}}</span>
+                  </div>
+                </ng-template>
+
+              </p-multiSelect>
+            </ng-template>
+          </p-columnFilter>
+        </div>
+      </th>
+
+      <th>
+        <div class="p-d-flex p-jc-between p-ai-center">
+          Envio
+
+          <p-columnFilter field="envio" matchMode="in" display="menu" [showMatchModes]="false" [showOperator]="false"
+            [showAddButton]="false">
+
+            <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+              <p-multiSelect [ngModel]="value" [options]="envios" placeholder="Any" (onChange)="filter($event.value)">
+
+                <ng-template let-option pTemplate="item">
+                  <div class="p-multiselect-envios-option">
+                    <span class="p-ml-1">{{option.date}}</span>
+                  </div>
+                </ng-template>
+
+              </p-multiSelect>
+            </ng-template>
           </p-columnFilter>
         </div>
       </th>
@@ -77,6 +122,98 @@
           </p-columnFilter>
         </div>
       </th>
+
+      <th>
+        <div class="p-d-flex p-jc-between p-ai-center">
+          Aprovação
+
+          <p-columnFilter field="aprovacao" matchMode="in" display="menu" [showMatchModes]="false"
+            [showOperator]="false" [showAddButton]="false">
+
+            <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+              <p-multiSelect [ngModel]="value" [options]="aprovacoes" placeholder="Any"
+                (onChange)="filter($event.value)">
+
+                <ng-template let-option pTemplate="item">
+                  <div class="p-multiselect-aprovacao-option">
+                    <span class="p-ml-1">{{option.date}}</span>
+                  </div>
+                </ng-template>
+
+              </p-multiSelect>
+            </ng-template>
+          </p-columnFilter>
+        </div>
+      </th>
+
+      <th>
+        <div class="p-d-flex p-jc-between p-ai-center">
+          C. Custo
+
+          <p-columnFilter field="cCusto" matchMode="in" display="menu" [showMatchModes]="false" [showOperator]="false"
+            [showAddButton]="false">
+
+            <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+              <p-multiSelect [ngModel]="value" [options]="cCustos" placeholder="Any" (onChange)="filter($event.value)">
+
+                <ng-template let-option pTemplate="item">
+                  <div class="p-multiselect-cCusto-option">
+                    <span class="p-ml-1">{{option.custo}}</span>
+                  </div>
+                </ng-template>
+
+              </p-multiSelect>
+            </ng-template>
+          </p-columnFilter>
+        </div>
+      </th>
+
+      <th>
+        <div class="p-d-flex p-jc-between p-ai-center">
+          Ordem de Compra
+
+          <p-columnFilter field="ordemCompra" matchMode="in" display="menu" [showMatchModes]="false"
+            [showOperator]="false" [showAddButton]="false">
+
+            <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+              <p-multiSelect [ngModel]="value" [options]="ordemCompras" placeholder="Any"
+                (onChange)="filter($event.value)" optionLabel="compra">
+
+                <ng-template let-option pTemplate="item">
+                  <div class="p-multiselect-ordemCompra-option">
+                    <span class="p-ml-1">{{option.compra}}</span>
+                  </div>
+                </ng-template>
+
+              </p-multiSelect>
+            </ng-template>
+          </p-columnFilter>
+        </div>
+      </th>
+
+      <th>
+        <div class="p-d-flex p-jc-between p-ai-center">
+          Informações Adicionais
+
+          <p-columnFilter field="informacoesAdicionais" matchMode="in" display="menu" [showMatchModes]="false"
+            [showOperator]="false" [showAddButton]="false">
+
+            <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+              <p-multiSelect [ngModel]="value" [options]="informacoesAdicionais" placeholder="Any"
+                (onChange)="filter($event.value)">
+
+                <ng-template let-option pTemplate="item">
+                  <div class="p-multiselect-informacoesAdicionais-option">
+                    <span class="p-ml-1">{{option.informacoes}}</span>
+                  </div>
+                </ng-template>
+
+              </p-multiSelect>
+            </ng-template>
+          </p-columnFilter>
+        </div>
+      </th>
+
     </tr>
 
   </ng-template>
@@ -88,12 +225,43 @@
       </td>
 
       <td>
-        {{customer.fornecedor}}
+        <span class="image-text">{{customer.fornecedor.name}}</span>
+      </td>
+
+      <td>
+        <span class="image-text">{{customer.valor.item}}</span>
+      </td>
+
+      <td>
+        <span class="image-text">{{customer.envio.data}}</span>
+
       </td>
 
       <td>
         <span [class]="'customer-badge status-' + customer.status">{{customer.status}}</span>
       </td>
+
+      <td>
+        <span class="image-text">{{customer.aprovacao.data}}</span>
+
+      </td>
+
+      <td>
+        <span class="image-text">{{customer.cCusto.custo}}</span>
+
+      </td>
+
+      <td>
+        <span class="image-text">{{customer.ordemCompra.compra}}</span>
+
+      </td>
+
+      <td>
+        <span class="image-text">{{customer.informacoesAdicionais.informacoes}}</span>
+
+      </td>
+
+
 
     </tr>
 
